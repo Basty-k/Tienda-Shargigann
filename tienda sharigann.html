@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Marvel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eVSTQ3ssLQVY+PnnA/JUJqJy4F9FfZt6cPKGy3X8pMqfNp4yF4W9AYwQ1v/VbCLr" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <h1>
+            <img src="https://preview.redd.it/what-were-fan-theories-about-kakashis-sharingan-before-his-v0-upygx3cpebub1.png?auto=webp&s=18a74a9b31b898c5cb0820d6f63573b3a6eeb727" alt="Logo" style="height: 50px; vertical-align: middle;">
+            <a href="#inicio" id="titulo-inicio">Comics Sharingann</a>
+        </h1>
+        <nav>
+            <ul>
+                <li style="font-size: 22px;"><a href="#inicio">Inicio</a></li>
+                <li style="font-size: 22px;"><a href="#tienda">Tienda</a></li>
+                <li style="font-size: 22px;"><a href="#contacto">Contacto</a></li>
+                <li style="font-size: 22px;"><a href="#quienes-somos">Quiénes Somos</a></li>
+                <li style="font-size: 22px;"><a href="#login">Iniciar Sesión</a></li>
+                <li style="font-size: 22px;"><a href="#register">Registrarse</a></li>
+                <li class="nav-item">
+                    <a href="#carrito"><img src="https://img.icons8.com/?size=30&id=3538&format=png&color=000000" alt="carrito"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="inicio" class="active">
+            <h2 style="font-size: 40px;">Bienvenido a Comics Sharingann</h2>
+            <p style="font-size: 25px;"id="usuario-bienvenida"></p>
+            <div class="comics-muestra" id="comics-muestra"></div>
+            <div class="comics-destacados">
+                <div>
+                    <h3>Iron Man</h3>
+                    <img src="https://images.cdn2.buscalibre.com/fit-in/360x360/b0/2b/b02b8436ec7bb1e24d5fc49a2c1539cf.jpg" alt="Iron Man">
+                    <p style="font-size: 20px;">Iron Man es un superhéroe de Marvel Comics.</p>
+                </div>
+                <div>
+                    <h3>Captain America</h3>
+                    <img src="https://images.cdn2.buscalibre.com/fit-in/360x360/bb/ae/bbae5fdf15b20014bb7b9d6d2495ee11.jpg" alt="Captain America">
+                    <p style="font-size: 20px;">Captain America, un ícono del Universo Marvel.</p>
+                </div>
+                <div>
+                    <h3>Spider-Man</h3>
+                    <img src="https://images.cdn2.buscalibre.com/fit-in/360x360/20/fd/20fdfe688c8185296ced96c6ec90c48e.jpg" alt="Spider-Man">
+                    <p style="font-size: 20px;">Spider-Man, el trepamuros favorito de todos.</p>
+                </div>
+                <div>
+                    <h3>X-Men</h3>
+                    <img src="https://images.cdn2.buscalibre.com/fit-in/360x360/7e/42/7e424dc4fdac236d32a6c805f8d99bc6.jpg" alt="X-Men">
+                    <p style="font-size: 20px;">El equipo mutante X-Men.</p>
+                </div>
+                <div>
+                    <h3>Hulk</h3>
+                    <img src="https://images.cdn2.buscalibre.com/fit-in/360x360/81/1b/811bf205f13c15abbd193a353c193ce2.jpg" alt="Hulk">
+                    <p style="font-size: 20px;">El gigante verde Hulk.</p>
+                </div>
+                <div>
+                    <h3>Ant-Man</h3>
+                    <img src="https://images.cdn1.buscalibre.com/fit-in/360x360/53/c6/53c69e62ce140442671b6c7b6a09b532.jpg" alt="Ant-Man">
+                    <p style="font-size: 20px;">El diminuto Ant-Man.</p>
+                </div>                        
+            </div>
+        </section>
+        <section id="tienda">
+            <h2>Tienda</h2>
+            <p style="font-size: 25px;">Explora nuestra amplia colección de cómics de Marvel. ¡Encuentra tu favorito!</p>
+            <div id="productos" class="row"></div>
+        </section>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form id="contacto-form">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+        <section id="quienes-somos">
+            <h2>Quiénes Somos</h2>
+            <p style="font-size: 20px;">Comics Sharingann es una tienda en línea dedicada a ofrecer una amplia selección de cómics de Marvel.</p>
+            <p style="font-size: 20px;">Nuestro objetivo es proporcionar a los aficionados y coleccionistas acceso a los cómics más recientes y clásicos, garantizando una experiencia de compra fácil y agradable.</p>
+        </section>
+        <section id="carrito">
+            <h2>Carrito de Compra</h2>
+            <div id="lista-carrito"></div>
+            <button id="vaciar-carrito">Vaciar Carrito</button>
+            <div id="total-carrito"></div>
+            <button id="comprar">Comprar</button>
+        </section>
+        <section id="login">
+            <h2>Iniciar Sesión</h2>
+            <div id="mensaje-sesion"></div>
+            <form id="login-form">
+                <label for="login-username">Usuario:</label>
+                <input type="text" id="login-username" name="username" required>
+                <label for="login-password">Contraseña:</label>
+                <input type="password" id="login-password" name="password" required>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </section>
+        <section id="register">
+            <h2>Registrarse</h2>
+            <form id="register-form">
+                <label for="register-gmail">Gmail:</label>
+                <input type="email" id="register-gmail" name="gmail" required>
+                <label for="register-username">Nombre de Usuario:</label>
+                <input type="text" id="register-username" name="username" required>
+                <label for="register-password">Contraseña:</label>
+                <input type="password" id="register-password" name="password" required>
+                <button type="submit">Registrarse</button>
+            </form>
+        </section>
+    </main>
+    <div id="modal-tarjeta" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Ingrese los datos de su tarjeta</h2>
+            <form id="form-tarjeta">
+                <label for="nombre-tarjeta">Nombre en la Tarjeta:</label>
+                <input type="text" id="nombre-tarjeta" required>
+                <label for="numero-tarjeta">Número de Tarjeta:</label>
+                <input type="text" id="numero-tarjeta" required>
+                <label for="fecha-expiracion">Fecha de Expiración:</label>
+                <input type="text" id="fecha-expiracion" required>
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" required>
+                <button type="submit">Pagar</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Comics Sharingann</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.instagram.com/" target="_blank"><img src="https://img.icons8.com/?size=30&id=Xy10Jcu1L2Su&format=png&color=000000" alt="Instagram"></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.facebook.com/" target="_blank"><img src="https://img.icons8.com/?size=30&id=118497&format=png&color=000000" alt="Facebook"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <p style="font-size: 25px; text-align: center; margin-top: 20px;">© 2024 Comics Sharingann | Tienda de comics.</p>
+        </div>
+    </footer>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./Assets/Js/script.js"></script>
+</body>
+</html>

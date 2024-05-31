@@ -1,0 +1,245 @@
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #998585;
+}
+
+
+header {
+    background-color: #ff0606;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+header h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+header h1 img {
+    margin-right: 10px;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+nav ul li {
+    margin: 0 10px;
+}
+
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+main {
+    padding: 20px;
+}
+
+
+section {
+    display: none; /* Ocultar todas las secciones por defecto */
+    margin-bottom: 20px;
+}
+
+
+section.active {
+    display: block; /* Mostrar la sección activa */
+}
+
+
+h2 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+
+#productos, #lista-carrito {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+#productos div, #lista-carrito div {
+    background-color: white;
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    width: calc(33.333% - 40px);
+}
+
+
+@media (max-width: 768px) {
+    #productos div, #lista-carrito div {
+        width: calc(50% - 40px);
+    }
+}
+
+
+@media (max-width: 480px) {
+    #productos div, #lista-carrito div {
+        width: 100%;
+    }
+}
+
+
+.item-carrito {
+    display: flex;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+
+.item-carrito img {
+    max-width: 100px;
+    margin-right: 10px;
+}
+
+
+.comic-info {
+    flex: 1;
+}
+
+
+#total-carrito {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+#vaciar-carrito {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+#vaciar-carrito:hover {
+    background-color: #cc0000;
+}
+
+
+#mensaje-sesion {
+    margin-top: 10px;
+}
+
+
+.comics-muestra {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+
+.comics-muestra div {
+    text-align: center;
+    width: calc(33.333% - 20px);
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+
+.comics-muestra div img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+.comics-destacados {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+
+.comics-destacados div {
+    text-align: center;
+    width: calc(33.333% - 20px);
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+
+.comics-destacados div img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .comics-muestra div, .comics-destacados div {
+        width: calc(50% - 20px);
+    }
+}
+
+
+@media (max-width: 480px) {
+    .comics-muestra div, .comics-destacados div {
+        width: 100%;
+    }
+}
+
+
+/* Estilos para el Modal de Tarjeta */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
